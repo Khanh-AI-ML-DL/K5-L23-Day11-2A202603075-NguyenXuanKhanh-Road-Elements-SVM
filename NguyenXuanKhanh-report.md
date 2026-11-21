@@ -1,6 +1,6 @@
 # Báo cáo cá nhân — Ngày 11
 Họ tên: Nguyễn Xuân Khánh               Mã học viên: 2A202603075  
-Phiên bản CVAT (Help → About): [TỰ ĐIỀN]  
+Phiên bản CVAT (Help → About): localhost:808
 Guideline: Road v1.0    Lần nộp (`revision` trong manifest): 1  
 Thời điểm export (ngày giờ trên CVAT): 2026-11-20, job front cập nhật 18:49 UTC, job fisheye 18:43 UTC (manifest tạo 18:52 UTC)    Số lần nộp lại sau Rework: 0
 
@@ -12,7 +12,7 @@ Thời điểm export (ngày giờ trên CVAT): 2026-11-20, job front cập nh�
 | 4 tag ảnh | Đúng | camera, timeofday, weather, source; mỗi tag có thuộc tính `value`. 20/20 ảnh đủ 4 tag |
 
 Cách kết thúc polyline trên bản CVAT này: bấm phím **N**  
-Cách đặt tag ảnh trên bản CVAT này: công cụ **Tag** ở thanh bên trái, đặt camera trước, rồi mở Details kiểm giá trị (CVAT tự điền giá trị đầu danh sách)
+Cách đặt tag ảnh trên bản CVAT này: công cụ **Tag** ở thanh bên trái, đặt camera trước, rồi mở Details kiểm giá trị 
 
 ## 2. Số lượng đã gán
 | Task | Ảnh | lane | road_curb | crosswalk | drivable | traffic_light | traffic_sign |
@@ -25,17 +25,17 @@ Cách đặt tag ảnh trên bản CVAT này: công cụ **Tag** ở thanh bên 
 Tổng: 20 ảnh, 138 hình + 80 tag. Lint lúc tạo manifest: nặng 4, chính 6, nhẹ 1.
 
 ## 3. Bảng ca khó
-| Ảnh | Nhãn | Phân vân giữa | Đã chọn | Lý do |
-| --- | --- | --- | --- | --- |
-| A05 | lane L1, R1 | Vẽ vạch / không vẽ | Không vẽ | Ảnh không thấy vạch sơn; coach đã xác nhận, được miễn QC1-02 theo đặc tả bàn giao mục 2 |
-| A06 | lane R1 | Vẽ / không vẽ | Không vẽ | Bên phải không thấy vạch; coach đã xác nhận, được miễn QC1-02 |
-| A09 | lane R1 | Vẽ / không vẽ | Không vẽ | Không thấy vạch bên phải; coach đã xác nhận, được miễn QC1-02 |
+| Ảnh | Nhãn | Phân vân giữa | Đã chọn                     | Lý do |
+| --- | --- | --- |-----------------------------| --- |
+| A05 | lane L1, R1 | Vẽ vạch / không vẽ | Không vẽ                    | Ảnh không thấy vạch sơn; coach đã xác nhận, được miễn QC1-02 theo đặc tả bàn giao mục 2 |
+| A06 | lane R1 | Vẽ / không vẽ | Không vẽ                    | Bên phải không thấy vạch; coach đã xác nhận, được miễn QC1-02 |
+| A09 | lane R1 | Vẽ / không vẽ | Không vẽ                    | Không thấy vạch bên phải; coach đã xác nhận, được miễn QC1-02 |
 | A09 | lane L2 (kind=double) | Một polyline / hai polyline | Hai polyline, cùng position | Vạch đôi gồm hai nét song song; theo hướng dẫn của coach, vẽ 2 đường và để cùng position |
 | A11 | lane L1 (yellow, double) | Một polyline / hai polyline | Hai polyline, cùng position | Như A09: vạch vàng đôi hai nét song song, theo hướng dẫn của coach trên lớp |
-| B03, B04, B08 | lane (3 điểm) | Thêm điểm / giữ nguyên | Giữ nguyên | Lint vẫn báo QC1-11 dù thêm hay bớt điểm; coach đã xem và xác nhận nên giữ nguyên |
-| B04 | traffic_sign #2 | edge_zone bật / tắt | [TỰ ĐIỀN: bật hay tắt] | Lint gợi ý bật vì tâm hộp ngoài 80 % bán kính vòng ảnh |
-| A10 | traffic_sign #2 | Bỏ / giữ | Giữ | Hộp thấp hơn 8 px nên không bắt buộc, vẫn giữ vì biển phụ nhìn rõ |
-| A08 | drivable | direct × 2 | [TỰ ĐIỀN: giữ hay sửa] | Hai vùng direct trên cùng một ảnh |
+| B03, B04, B08 | lane (3 điểm) | Thêm điểm / giữ nguyên | Giữ nguyên                  | Lint vẫn báo QC1-11 dù thêm hay bớt điểm; coach đã xem và xác nhận nên giữ nguyên |
+| B04 | traffic_sign #2 | edge_zone bật / tắt | Bật                         | Lint gợi ý bật vì tâm hộp ngoài 80 % bán kính vòng ảnh |
+| A10 | traffic_sign #2 | Bỏ / giữ | Giữ                         | Hộp thấp hơn 8 px nên không bắt buộc, vẫn giữ vì biển phụ nhìn rõ |
+| A08 | drivable | direct × 2 | Giữ cả 2 theo lời coach     | Hai vùng direct trên cùng một ảnh |
 
 ## 4. Phiếu QC 1 nhận được
 Bạn kiểm lô của tôi: chưa có (tại thời điểm nộp chưa nhận được phiếu)  Quyết định nhận được: chưa có  
