@@ -71,14 +71,8 @@ Bạn kiểm lô của tôi: chưa có (tại thời điểm nộp chưa nhận 
 
 4. Một đoạn XML có `<polyline label="lane">` (trích từ A01 trong `NguyenXuanKhanh-front.zip`):
 
-```xml
-<polyline label="lane" source="manual" occluded="0" points="0.51,601.15;333.96,504.83" z_order="0">
-  <attribute name="position">L2</attribute>
-  <attribute name="style">solid</attribute>
-  <attribute name="color">white</attribute>
-  <attribute name="kind">single</attribute>
-</polyline>
-```
+![Ảnh lable line đã gán](images/lable_line.png)
+
 
 ## 7. Tự đánh giá
 Lỗi bạn mắc nhiều nhất hôm nay (theo mã QC1-xx), và cách tránh ở Ngày 20: QC1-11 (lane fisheye chỉ có 3 điểm) và QC1-05 (vạch đôi vẽ thành hai polyline). Lần sau đặt điểm dày theo cung ở vòng ngoài ngay khi vẽ, và hỏi coach trước một vạch đôi là một hay hai polyline rồi ghi vào bảng ca khó.  
